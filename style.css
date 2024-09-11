@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+#map-section {
+  flex-basis: 60%;
+}
+
+#map {
+  height: 500px;
+  width: 100%;
+  border: 2px solid #ccc;
+  margin-bottom: 20px;
+}
+
+#info-section {
+  flex-basis: 30%;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard.hidden {
+  display: none;
+}
+
+#bus-info, #location-confirmation {
+  margin-top: 20px;
+  font-size: 18px;
+}

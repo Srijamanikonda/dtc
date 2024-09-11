@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bus Scheduling and Route Management</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+</head>
+<body>
+  <header>
+    <h1>Automated Bus Scheduling & Route Management</h1>
+    <nav>
+      <button id="user-dashboard">User Dashboard</button>
+      <button id="driver-dashboard">Driver Dashboard</button>
+    </nav>
+  </header>
+  
+  <main>
+    <section id="map-section">
+      <div id="map"></div>
+    </section>
+
+    <section id="info-section">
+      <!-- User Dashboard -->
+      <div id="user-info" class="dashboard hidden">
+        <h2>User Dashboard</h2>
+        <p>Select a bus route and stop to see the real-time location and estimated arrival time (ETA).</p>
+        <select id="bus-selector">
+          <option value="">Select a Bus Route</option>
+          <option value="1">Bus 101 - Route 1</option>
+          <option value="2">Bus 102 - Route 2</option>
+        </select>
+        <select id="stop-selector" class="hidden">
+          <option value="">Select a Stop</option>
+        </select>
+        <div id="bus-info"></div>
+      </div>
+
+      <!-- Driver Dashboard -->
+      <div id="driver-info" class="dashboard hidden">
+        <h2>Driver Dashboard</h2>
+        <p>Report your current location and update users in real-time. View the next stop and ETA.</p>
+        <label for="route-selector">Select your route:</label>
+        <select id="route-selector">
+          <option value="1">Bus 101 - Route 1</option>
+          <option value="2">Bus 102 - Route 2</option>
+        </select>
+        <label for="driver-location">Choose your stop:</label>
+        <select id="driver-location">
+          <!-- Options will be dynamically populated based on the selected route -->
+        </select>
+        <button id="report-location">Report Location</button>
+        <p id="location-confirmation"></p>
+        <p id="driver-eta"></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
